@@ -25,6 +25,10 @@ inputs:
     description: "Name of the release"
     required: true
     default: 'v0.0.1'
+  description:
+    description: "The release description"
+    required: false
+    default: ''
   is-released:
     description: 'Define should our release be in "Released" status'
     required: false
@@ -38,4 +42,5 @@ runs:
     - ${{ inputs.project-name }}
     - ${{ inputs.release-name }}
     - ${{ inputs.jira-server }}
+    - ${{ inputs.description }}
     - ${{ inputs.is-released }}
